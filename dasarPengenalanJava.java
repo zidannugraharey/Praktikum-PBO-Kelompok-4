@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+package com.mycompany.dasarpengenalanjava;
+
+public class DasarPengenalanJava 
+{
+    public static void main(String[] args) 
+    {
+        String nama = "Nahda Zahirah";
+        final long NIM = 2407113190L;   // Konstanta
+        String alamat;                  // Deklarasi variabel
+        alamat = "Jl. Sekolah";          // Inisialisasi variabel
+        double[] IP = {3.85, 3.79};     // IP semester 1 dan 2
+        int count = 1;                  // Untuk menampilkan semester
+        char blood = 'B';               // Golongan darah
+
+        // Menampilkan output
+        System.out.println("Nama = " + nama);
+        System.out.println("NIM = " + NIM);
+        System.out.println("Alamat = " + alamat);
+        System.out.println("Golongan Darah = " + blood);
+        System.out.println(" ");
+
+        for (int i = 0; i < IP.length; i++) {
+            System.out.println("IP Semester " + count + " = " + IP[i]);
+            count++; // Agar jumlah hitungan semesternya bertambah
+        }
+    }
+}
