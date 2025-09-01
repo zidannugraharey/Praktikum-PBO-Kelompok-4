@@ -23,11 +23,13 @@ public class TipeData {
         double[] IP = {3.83, 3.82}; //ip semester 1 dan 2
         int count = 1; //untuk menampilkan semester 
         char blood = 'O';
+        int umur = 19;
 
         //menampilkan output
         System.out.println("Nama = "+ nama);
         System.out.println("NIM = "+ NIM);
         System.out.println("Alamat = "+ alamat);
+        System.out.println("Umur = "+ umur);
         System.out.println("Golongan Darah = "+ blood);
         System.out.println(" ");
         
