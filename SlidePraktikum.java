@@ -1,0 +1,133 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.slidepraktikum;
+
+/**
+ *
+ * @author alex
+ */
+public class SlidePraktikum {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner (System.in);
+        int a = 10, b = 3;
+        boolean c = true, d = false;
+        
+        System.out.println ("a + b = " + (a + b));
+        System.out.println ("a - b = " + (a - b));
+        System.out.println ("a * b = " + (a * b));
+        System.out.println ("a / b = " + (a / b));
+        System.out.println ("a % b = " + (a % b));
+        
+        //Increment/Decrement
+        System.out.println ("++a = " + (++a));
+        System.out.println ("b-- = " + (b--));
+        
+        //Perbandingan
+        System.out.println ("a == b = " + (a == b));
+        System.out.println ("a != b = " + (a != b));
+        System.out.println ("a > b = " + (a > b));
+        System.out.println ("a < b = " + (a < b));
+        System.out.println ("a >= b = " + (a >= b));
+        System.out.println ("a <= b = " + (a <= b));
+        
+        //Logika
+        System.out.println ("c && d = " + (c && d));
+        System.out.println ("c || d = " + (c || d));
+        System.out.println ("!c = " + (!c));
+        
+        //Short circuit evaluation
+        boolean result = (b != 0) && (a/ b > 2);
+        System.out.println ("Result = " + result);
+        
+        //Assignment
+        int num = 10;
+        
+        num += 5;
+        num -= 3;
+        num *= 2;
+        num /= 4;
+        num %= 4;
+        
+        System.out.println("Hasil akhir = " + num);
+        
+        //Ternary
+        String grade = (a >= 8) ? "A" : (a >= 7) ? "B" : "C";
+        System.out.println("Nilai = " + grade);
+        
+        //Penggunaan untuk mencari nilai maximum
+        int max = (10 > 5) ? 10 : 5;
+        System.out.println("Maximum = " + max);
+        
+        //Bitwise
+        System.out.println("a & b = " + (a & b));
+        System.out.println("a | b = " + (a | b));
+        System.out.println("a ^ b = " + (a ^ b));
+        System.out.println("-a = " + (-a));
+        System.out.println("a << 2 = " + (a << 2));
+        System.out.println("a >> 2 = " + (a >> 2));
+        
+        //Input/Output
+        
+        System.out.println("Masukkan nama : ");
+        String nama = scanner.nextLine();
+        
+        System.out.println("Masukkan umur : ");
+        int umur = scanner.nextInt();
+        
+        System.out.println("Masukkan tinggi badan : ");
+        double tinggi = scanner.nextDouble();
+        
+        System.out.printf("Nama : %s, Umur : %d, Tinggi : %.1f cm%n", nama, umur, tinggi);
+        
+        //println
+        System.out.println("Hello world");
+        System.out.println("Baris kedua");
+        
+        //print
+        System.out.print("Hello");
+        System.out.print("World!");
+        
+        //Class Wrapper
+        String strNumber = "123";
+        String strDouble = "45.67";
+        String strBoolean = "true";
+        
+        //Konversi string ke wrapper dan sebaliknya 
+        int num = Integer.parseInt(strNumber);
+        double decimal = Double.parseDouble(strDouble);
+        boolean flag = Boolean.parseBoolean(strBoolean);
+        
+        System.out.println("Parsed int = " + num);
+        System.out.println("Parsed double = " + decimal);
+        System.out.println("Parsed boolean = " + flag);
+        
+        Integer wrappedNum = Integer.valueOf(strNumber);
+        Double wrappedDouble = Double.valueOf(strDouble);
+        
+        System.out.println("Wrapped Integer = " + wrappedNum);
+        System.out.println("Wrapped Double = " + wrappedDouble);
+        
+        //autoboxing dan unboxing
+        int primitiveInt = 100;
+        Integer wrappedInt = primitiveInt;
+        
+        Integer anotherWrapper = 200;
+        int anotherprimitive = anotherWrapper;
+        
+        //Enum
+        enum Hari {
+            SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU
+        }
+        
+        Hari hariIni = Hari.SENIN;
+        
+        if (hariIni == Hari.SENIN)
+        {
+            System.out.println("Hari ini adalah senin");
+            System.out.println("Besok adalah : " + Hari.SELASA);
+        }
+    }
+}
