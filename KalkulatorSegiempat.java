@@ -13,7 +13,7 @@ public class KalkulatorSegiempat {
     public static void main(String[] args){
         
         //Kalkulator Bangun Ruang Prisma Segi 4
-        //Dalam kalkulator dapat menghitung Volume, Luas Permukaan, Total Panjang Rusuk
+        //Kalkulator dapat menghitung Volume, Luas Permukaan, Total Panjang Rusuk
 
         //Deklarasi Variabel
         Scanner scanner = new Scanner(System.in);
