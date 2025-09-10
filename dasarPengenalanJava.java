@@ -12,25 +12,26 @@ public class dasarPengenalanJava {
 
     public static void main(String[] args) {
         
-        /*1. Nama
-         * 2. NIM
-         * 3. IP Tiap semester 
-         * 4. Alamat
-         * 5. Umur
-         * 6. Golongan darah
+        /*1. Nama ✔️
+         * 2. NIM ✔️
+         * 3. IP Tiap semester ✔️ 
+         * 4. Alamat ✔️
+         * 5. Umur ✔️
+         * 6. Golongan darah ✔️
          * 
-         * Konversi 1 IP ke tipe data byte, Tambahkan komentar, Wajib ada 1 Konstanta
+         * Konversi 1 IP ke tipe data byte (✔️), Tambahkan komentar (✔️), Wajib ada 1 Konstanta
          * Tampilkan semua variable ke layar (System.out.println)
          */
-        
-        String nama = "Alya Kinanti";
-        final long NIM = 2407135010L;
-        String alamat; //deklarasi variabel
-        alamat = "Jl.Lobak"; //inisialisasi variabel
+
+        //Nama, NIM, IP, Alamat, Umur, Gol.Darah
+        String nama = "Alya Kinanti"; //Nama
+        final long NIM = 2407135010L; //NIM
+        String alamat; //deklarasi variabel 
+        alamat = "Jl.Lobak"; //inisialisasi variabel [ Alamat ]
         double[] IP = {3.63, 3.64}; //ip semester 1 dan 2
-        int count = 1; //untuk menampilkan semester 
-        char blood = 'O';
-        int umur = 20;
+        int count = 1; //menampilkan semester 
+        char blood = 'O'; //Golongan darah
+        int umur = 20; //Umur
 
         //menampilkan output
         System.out.println("Nama = "+ nama);
