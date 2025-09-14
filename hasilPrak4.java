@@ -1,12 +1,14 @@
 import java.util.Scanner;
 public class hasilPrak4 {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         
         Scanner scanner = new Scanner(System.in);
         //If else
         System.out.println("Masukkan nilai: ");
         int nilai = scanner.nextInt();
-        if (nilai > 75) {
+        if (nilai > 75) 
+        {
             System.out.println("Anda lulus ujian");
         }
         else
@@ -31,7 +33,8 @@ public class hasilPrak4 {
         //Switch Case
         System.out.println("Masukkan Warna (RGB): ");
         String warna = scanner.nextLine();
-        switch (warna) {
+        switch (warna) 
+        {
             case "R":
                 System.out.println("Anda memilih merah");
                 break;
@@ -49,7 +52,8 @@ public class hasilPrak4 {
         //nested if
         System.out.println("Masukkan angka: ");
         int angka = scanner.nextInt();
-        if (angka >= 0) {
+        if (angka >= 0) 
+        {
             System.out.println("Bilangan bernilai positif");
             if (angka % 2 == 0) {
                 System.out.println("dan genap");
@@ -94,7 +98,8 @@ public class hasilPrak4 {
         int a = 1;
 
         //While
-        while (a <= 5) {
+        while (a <= 5) 
+        {
             System.out.println("while loop ke-"+a);
             a++;
         }
@@ -110,7 +115,8 @@ public class hasilPrak4 {
 
         //Do While
         int x = 6;
-        do {
+        do 
+        {
             System.out.println("Do While loop ke-" + x);
             x++;
         } while (x <= 5);
@@ -153,3 +159,4 @@ public class hasilPrak4 {
         scanner.close();
     }
 }
+
