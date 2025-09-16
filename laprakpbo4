@@ -1,0 +1,79 @@
+cd C:\Users\LENOVO\Documents\NetBeansProjects\laprakpbo4; "JAVA_HOME=C:\\Program Files\\Java\\jdk-24" cmd /c "\"C:\\Program Files\\NetBeans-25\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dexec.vmArgs= \"-Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}\" \"-Dexec.executable=C:\\Program Files\\Java\\jdk-24\\bin\\java.exe\" -Dexec.mainClass=com.mycompany.laprakpbo4.latihan4 -Dexec.classpathScope=runtime -Dexec.appArgs= \"-Dmaven.ext.class.path=C:\\Program Files\\NetBeans-25\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" --no-transfer-progress process-classes org.codehaus.mojo:exec-maven-plugin:3.1.0:exec"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/C:/Program%20Files/NetBeans-25/netbeans/java/maven/lib/jansi-2.4.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/C:/Program%20Files/NetBeans-25/netbeans/java/maven/lib/guava-33.2.1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Scanning for projects...
+
+----------------------< com.mycompany:laprakpbo4 >----------------------
+Building laprakpbo4 1.0-SNAPSHOT
+  from pom.xml
+--------------------------------[ jar ]---------------------------------
+
+--- resources:3.3.1:resources (default-resources) @ laprakpbo4 ---
+skip non existing resourceDirectory C:\Users\LENOVO\Documents\NetBeansProjects\laprakpbo4\src\main\resources
+
+--- compiler:3.13.0:compile (default-compile) @ laprakpbo4 ---
+Nothing to compile - all classes are up to date.
+
+--- exec:3.1.0:exec (default-cli) @ laprakpbo4 ---
+----------------------------------------------
+      Selamat Datang di Kalkulator Luas Bangun Datar      
+----------------------------------------------
+Berikut menu-menu yang dapat digunakan:
+1. Menghitung Luas Persegi
+2. Menghitung Luas Persegi Panjang
+3. Menghitung Luas Lingkaran
+4. Menghitung Luas Segitiga
+5. Keluar
+Silahkan pilih menu berikut : 1
+Masukkan sisi persegi (cm): 30
+Luas persegi tersebut adalah 900.0 cm
+Berikut menu-menu yang dapat digunakan:
+1. Menghitung Luas Persegi
+2. Menghitung Luas Persegi Panjang
+3. Menghitung Luas Lingkaran
+4. Menghitung Luas Segitiga
+5. Keluar
+Silahkan pilih menu berikut : 2
+Masukkan panjang persegi panjang (cm): 21
+Masukkan lebar persegi panjang (cm): 16
+Luas persegi panjang tersebut adalah 336.0 cm
+Berikut menu-menu yang dapat digunakan:
+1. Menghitung Luas Persegi
+2. Menghitung Luas Persegi Panjang
+3. Menghitung Luas Lingkaran
+4. Menghitung Luas Segitiga
+5. Keluar
+Silahkan pilih menu berikut : 3
+Masukkan jari-jari lingkaran (cm): 37,4
+Luas lingkaran tersebut adalah 4392.1064 cm
+Berikut menu-menu yang dapat digunakan:
+1. Menghitung Luas Persegi
+2. Menghitung Luas Persegi Panjang
+3. Menghitung Luas Lingkaran
+4. Menghitung Luas Segitiga
+5. Keluar
+Silahkan pilih menu berikut : 4
+Masukkan alas segitiga (cm): 17
+Masukkan tinggi segitiga (cm): 38
+Luas segitiga tersebut adalah 323.0 cm
+Berikut menu-menu yang dapat digunakan:
+1. Menghitung Luas Persegi
+2. Menghitung Luas Persegi Panjang
+3. Menghitung Luas Lingkaran
+4. Menghitung Luas Segitiga
+5. Keluar
+Silahkan pilih menu berikut : 5
+Terima kasih telah menggunakan aplikasi ini!
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time:  02:59 min
+Finished at: 2025-09-14T14:56:36+07:00
+------------------------------------------------------------------------
