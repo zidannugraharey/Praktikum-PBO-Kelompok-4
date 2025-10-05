@@ -1,0 +1,20 @@
+
+package com.dicoding.mavenproject1;
+
+/**
+ *
+ * @author ASUS
+ */
+public class Fakultas {
+    public String nama;
+    private int kodeFakultas;
+    static int jumlahFakultas;
+    
+    public Fakultas(String nama, int kodeFakultas){
+        this.nama = nama;
+        this.kodeFakultas = kodeFakultas;
+    }
+    public static void tampilkanJumlahFakultas(){
+        System.out.println("Jumlh Fakultas = "+jumlahFakultas);
+    }
+}
