@@ -10,7 +10,7 @@ public class DasarPengenalanJava
         String nama = "Nahda Zahirah";
         final long NIM = 2407113190L;   // Konstanta
         String alamat;                  // Deklarasi variabel
-        alamat = "Jl. Sekolah";          // Inisialisasi variabel
+        alamat = "Jl. Sekolah";         // Inisialisasi variabel
         double[] IP = {3.85, 3.79};     // IP semester 1 dan 2
         int count = 1;                  // Untuk menampilkan semester
         char blood = 'B';               // Golongan darah
