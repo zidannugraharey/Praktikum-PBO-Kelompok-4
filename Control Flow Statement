@@ -1,4 +1,4 @@
-public class ControlFLowStatement{
+public class ControlFLowStatement {
     public static void main(String[] args) {
 
         /* ===Percabangan===
