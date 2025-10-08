@@ -58,6 +58,7 @@ public class kalkulatorluasbangundatar {
                 default -> System.out.println("Pilihan tidak valid, coba lagi!");
             }
         } 
+
         //Mengulangi menu sampai user memilih untuk keluar
         while (pilihan != 5);
         
