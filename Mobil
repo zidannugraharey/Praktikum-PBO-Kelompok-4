@@ -32,7 +32,7 @@ public class Mobil {
     {
         this.merk = merk;
         this.warna = "putih";
-        this.tahun = 2023;
+        this.tahun = 2023; 
         this.harga = 0.0;
     }
 }
