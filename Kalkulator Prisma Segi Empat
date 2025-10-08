@@ -7,7 +7,7 @@ package com.mycompany.kalkulatorprismasegiempat;
 import java.util.Scanner;
 
 public class KalkulatorPrismaSegiempat {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         
         //Kalkulator Bangun Ruang Prisma Segi 4
         //Dalam kalkulator dapat menghitung Volume, Luas Permukaan, Total Panjang Rusuk
