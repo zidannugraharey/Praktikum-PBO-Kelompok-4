@@ -5,10 +5,10 @@ abstract class Hewan {
         this.nama = nama;
     }
 
-    //method abstract
+    //Method abstract
     abstract void suara();
 
-    //method biasa
+    //Method biasa
     void info() {
         System.out.println("Nama hewan: "+ nama);
     }
