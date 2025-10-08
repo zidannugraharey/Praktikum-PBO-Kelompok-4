@@ -1,0 +1,78 @@
+public class tempatWisata {
+    String nama;
+    String lokasi;
+    double hargaTiket;
+    String jamOperasional;
+    String deskripsi;
+    String fasilitas;
+    double rating;
+
+    // Construktor 1 (default)
+    public tempatWisata() {
+        this.nama = "Candi Borobudur";
+        this.lokasi = "Magelang, Jawa Tengah";
+        this.hargaTiket = 120000;
+        this.jamOperasional = "07:00 - 17:00";
+        this.deskripsi = "Candi Budha terbesar di dunia"; 
+        this.fasilitas = "Toilet, Mushola, Parkir, Penginapan";
+        this.rating = 4.8;
+    }
+
+    // Construktor 2 (nama)
+    public tempatWisata(String nama) {
+        this.nama = nama;
+        this.lokasi = "Kabupaten Banjarnegara & Wonosobo, Jawa Tengah";
+        this.hargaTiket = 25000;
+        this.jamOperasional = "07.00 - 17.00";
+        this.deskripsi = "Kompleks candi Hindu tertua di Jawa yang berada di dataran tinggi Dieng"; 
+        this.fasilitas = "Toilet, Mushola, Parkir, Penginapan, Warung Makan";
+        this.rating = 4.6;
+    }
+
+    // Constructor 3 semuanya
+    public tempatWisata(String nama, String lokasi, double hargaTiket, String jamOperasional, String deskripsi, String fasilitas, double rating) {
+        this.nama = nama;
+        this.lokasi = lokasi;
+        this.hargaTiket = hargaTiket;
+        this.jamOperasional = jamOperasional;
+        this.deskripsi = deskripsi;
+        this.fasilitas = fasilitas;
+        this.rating = rating;
+    }
+
+    // Method untuk menampilkan informasi tempat wisata
+    public void Info() {
+        System.out.println("Nama           : " + nama);
+        System.out.println("Lokasi         : " + lokasi);
+        System.out.println("Harga Tiket    : " + hargaTiket);
+        System.out.println("Jam Operasional: " + jamOperasional);
+        System.out.println("Deskripsi      : " + deskripsi);
+        System.out.println("Fasilitas      : " + fasilitas);
+        System.out.println("Rating         : " + rating);
+    }
+
+    public static void main(String[] args) {
+        // Membuat objek menggunakan konstruktor default
+        tempatWisata wisata1 = new tempatWisata();
+        // // Membuat objek menggunakan konstruktor dengan parameter nama
+        tempatWisata wisata2 = new tempatWisata("Candi Prambanan");
+        // // Membuat objek meenggunakan konstruktor dengan semua parameter
+        tempatWisata wisata3 = new tempatWisata(
+            "Candi Prambanan", 
+            "Yogyakarta", 
+            150000, 
+            "08.00-18.00", 
+            "Candi Hindu terbesar di Indonesia", 
+            "Toilet, mushala, parkir, penginapan", 
+            4.7
+        );
+
+        System.out.println("\n==================Tempat Wisata=================\n");
+        wisata1.Info();
+        System.out.println("\n------------------------------------------------\n");
+        wisata2.Info();
+        System.out.println("\n------------------------------------------------\n");
+        wisata3.Info();
+        System.out.println("\n------------------------------------------------\n");
+    }
+}
