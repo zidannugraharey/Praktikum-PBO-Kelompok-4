@@ -1,49 +1,31 @@
-
-package com.dicoding.mavenproject1;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.company.praktikum7;
 
 /**
  *
  * @author ASUS
  */
-public class Produk {
-    public String nama;
-    private double harga;
-    protected int stok;
-    private String namaSupplier = "Rey";
+public class Produk implements HargaAkhir{
+    protected String nama;
+    protected int harga;
     
-    static int jumlahProduk = 0;
-    
-    public Produk (String nama, double harga, int stok)
-    {
+    public Produk(String nama, int harga){
         this.nama = nama;
         this.harga = harga;
-        this.stok = stok;
-        jumlahProduk++;
-    }
-    public static void tampilkanJumlahProduk(){
-        System.out.println("Jumlah produk adalah : "+ jumlahProduk);
-    }
-    public double getHarga(){
-        return this.harga;
-    }
-    public void setHarga(double hargaBaru){
-        if(hargaBaru > 0){
-            this.harga = hargaBaru;
-            System.out.println("harga baru adalah "+ this.harga);
-        }
-        else if(hargaBaru == 0){
-            System.out.println("Barang Gratis");
-        }
-        else{
-            System.out.println("Harga tidak bisa negatif");
-        }
     }
     public void tampilkanInfo(){
-        System.out.println("Nama : "+ nama);
-        System.out.println("Harga : "+ harga);
-        System.out.println("Stok : "+ stok);
+        System.out.println("Nama produk : "+ nama);
+        System.out.println("Harga   : "+ harga);
     }
-    public void tampilanNamaSupplier(){
-        System.out.println("Nama supplier adalah: "+ namaSupplier);
+    public double hitungPajak(){
+        return harga * 0.5;
+    }
+    
+    @Override
+    public double hitungHarga(){
+        return harga * 1.05;
     }
 }
