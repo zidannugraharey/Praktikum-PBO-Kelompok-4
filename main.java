@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.praktikum9.MainJFrame;
-
 /**
  *
  * @author Nahda
@@ -39,3 +38,4 @@ public class Main {
         frame.setVisible(true);
     }
 }
+
