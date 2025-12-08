@@ -1,0 +1,184 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
+
+
+package com.mycompany.praktikum9;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+public class LihatDataPanel extends javax.swing.JPanel {
+
+    /**
+     * Creates new form NewJPanel
+     */
+    
+    public LihatDataPanel() {
+        initComponents();
+        loadData();
+        
+        MahasiswaTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                int selectedRow = MahasiswaTable.getSelectedRow();
+
+                if (selectedRow >= 0) {
+                    // Ambil data dari tabel
+                    Mahasiswa m = Mahasiswa.mahasiswa.get(selectedRow);
+
+                    // Tampilkan pilihan aksi
+                    String[] options = {"Update", "Delete", "Batal"};
+                    int choice = JOptionPane.showOptionDialog(
+                            null,
+                            "Data Mahasiswa:\n" +
+                            "Nama: " + m.getNama() + "\n" +
+                            "NIM: " + m.getNim() + "\n" +
+                            "Prodi: " + m.getProdi() + "\n" +
+                            "Jenis Kelamin: " + m.getJenisKelamin() + "\n" +
+                            "Status: " + (m.isActive() ? "Aktif" : "Tidak Aktif") + "\n\n" +
+                            "Pilih tindakan yang ingin dilakukan:",
+                            "Detail Data Mahasiswa",
+                            JOptionPane.DEFAULT_OPTION,
+                            JOptionPane.INFORMATION_MESSAGE,
+                            null,
+                            options,
+                            options[0]
+                    );
+
+                    // Aksi berdasarkan pilihan
+                    switch (choice) {
+                        case 0: // Update
+                            // Misal buka panel TambahData dengan data lama
+                            MainJFrame main = (MainJFrame) javax.swing.SwingUtilities.getWindowAncestor(MahasiswaTable);
+                            TambahDataPanel tambahPanel = new TambahDataPanel();
+                            tambahPanel.setFormData(m, selectedRow);
+                            main.changeMainPanel(tambahPanel);
+                            break;
+
+                        case 1: // Delete
+                            int confirm = JOptionPane.showConfirmDialog(null,
+                                    "Apakah yakin ingin menghapus data ini?",
+                                    "Konfirmasi Hapus",
+                                    JOptionPane.YES_NO_OPTION);
+                            if (confirm == JOptionPane.YES_OPTION) {
+                                Mahasiswa.mahasiswa.remove(selectedRow);
+                                updateTable(); // panggil fungsi untuk refresh tabel
+                                JOptionPane.showMessageDialog(null, "Data berhasil dihapus!");
+                            }
+                            break;
+
+                        default:
+                            // Batal, tidak melakukan apa pun
+                            break;
+                    }
+                }
+            }
+        });
+    }
+    
+    public void updateTable() {
+        javax.swing.table.DefaultTableModel model =
+            (javax.swing.table.DefaultTableModel) MahasiswaTable.getModel();
+        model.setRowCount(0);
+
+        for (Mahasiswa m : Mahasiswa.mahasiswa) {
+            model.addRow(new Object[]{
+                m.getNama(),
+                m.getNim(),
+                m.getProdi(),
+                m.getJenisKelamin(),
+                m.isActive() ? "Aktif" : "Tidak Aktif"
+            });
+        }
+    }
+        
+    private void loadData(){
+        String[] column = {"Nama", "NIM", "Prodi", "Jenis Kelamin", "Status"};
+         // Buat model tabel dan kunci sel supaya tidak bisa diedit
+        DefaultTableModel model = new DefaultTableModel(null, column) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+
+        // Tambahkan data dari list Mahasiswa ke tabel
+        for (Mahasiswa mhs : Mahasiswa.mahasiswa) {
+            model.addRow(new String[]{
+                mhs.getNama(),
+                mhs.getNim(),
+                mhs.getProdi(),
+                mhs.getJenisKelamin(),
+                mhs.isActive() ? "Aktif" : "Tidak Aktif"
+            });
+        }
+        // Tampilkan model ke tabel
+        MahasiswaTable.setModel(model);
+    }
+    
+    
+    
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        MahasiswaTable = new javax.swing.JTable();
+
+        setPreferredSize(new java.awt.Dimension(489, 300));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("Lihat Data Mahasiswa");
+
+        MahasiswaTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(MahasiswaTable);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable MahasiswaTable;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    // End of variables declaration//GEN-END:variables
+}
